@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Create Account | Student Academic Reminder System
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-7 col-md-8">
+
+        <div class="card shadow border-0">
+
+            <div class="card-body p-5">
+
+                <h2 class="text-center mb-4">
+                    Create Student Account
+                </h2>
+
+                <form action="#" method="post">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text" class="form-control" placeholder="Enter your full name" required>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Username
+                            </label>
+
+                            <input type="text" class="form-control" placeholder="Choose a username" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Email Address
+                        </label>
+
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Password
+                            </label>
+
+                            <input type="password" class="form-control" placeholder="Create a password" required>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Confirm Password
+                            </label>
+
+                            <input type="password" class="form-control" placeholder="Confirm your password" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-grid mt-4">
+
+                        <button type="submit" class="btn btn-primary btn-lg">
+
+                            Create Account
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <hr>
+
+                <p class="text-center text-muted mb-0">
+
+                    Already have an account?
+
+                    <a href="{{ request.url_for('login') }}">
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

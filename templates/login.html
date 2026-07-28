@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Login | Student Reminder System
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-md-6 col-lg-5">
+
+        <div class="card">
+
+            <div class="card-body p-4">
+
+                <h2 class="text-center mb-4">
+                    Student Login
+                </h2>
+
+                <form action="#" method="post">
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Username
+                        </label>
+
+                        <input type="text" class="form-control" placeholder="Enter your username">
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Password
+                        </label>
+
+                        <input type="password" class="form-control" placeholder="Enter your password">
+
+                    </div>
+
+                    <div class="d-grid">
+
+                        <button class="btn btn-primary btn-lg">
+
+                            Login
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <hr>
+
+                <p class="text-center text-muted">
+
+                    Don't have an account?
+
+                    <a href="#">
+                        Register
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

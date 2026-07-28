@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home | Student Reminder System
+{% endblock %}
+
+{% block content %}
+
+<div class="row align-items-center py-5">
+
+    <div class="col-lg-6">
+
+        <h1 class="display-4 fw-bold mb-3">
+            Stay Organized.<br>
+            Never Miss a Deadline.
+        </h1>
+
+        <p class="lead text-muted mb-4">
+            <strong><b><i>SMART STUDENT ORGANIZATION</i></b></strong> <br />
+            Organize assignments, examinations, projects, quizzes and
+            important academic events from one simple, easy-to-use reminder platform designed for students.
+        </p>
+
+        <a href="/login" class="btn btn-primary btn-lg me-2">
+            Get Started
+        </a>
+
+        <!--<a href="/reminders" class="btn btn-outline-primary btn-lg">
+            View Reminders
+        </a>
+        -->
+
+    </div>
+
+    <div class="col-lg-6 text-center">
+
+        <img src="{{ url_for('static', path='images/student-study.svg') }}" class="img-fluid" alt="Student studying">
+
+    </div>
+
+</div>
+
+
+<hr class="my-5">
+
+
+<div class="row text-center">
+
+    <div class="col-md-4 mb-4">
+
+        <div class="card h-100">
+
+            <div class="card-body">
+
+                <h2>📅</h2>
+
+                <h5 class="card-title">
+                    Manage Deadlines
+                </h5>
+
+                <p class="card-text">
+                    Keep track of assignments, quizzes,
+                    examinations and project submissions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-4 mb-4">
+
+        <div class="card h-100">
+
+            <div class="card-body">
+
+                <h2>⏰</h2>
+
+                <h5 class="card-title">
+                    Stay on Schedule
+                </h5>
+
+                <p class="card-text">
+                    Organize your academic activities and
+                    never forget an important date.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-4 mb-4">
+
+        <div class="card h-100">
+
+            <div class="card-body">
+
+                <h2>🎯</h2>
+
+                <h5 class="card-title">
+                    Improve Productivity
+                </h5>
+
+                <p class="card-text">
+                    Focus on your studies while the
+                    system helps you stay organized.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
