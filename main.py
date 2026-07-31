@@ -7,6 +7,11 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 
+import models
+from database import Base, engine
+
+Base.metadata.create_all(bind=engine)
+
 # ==================================================
 # FastAPI Configuration
 # ==================================================
@@ -37,3 +42,8 @@ def register(request: Request):
 @app.get("/reminders")
 def reminders(request: Request):
     return templates.TemplateResponse(request=request, name="reminders.html")
+
+
+@app.get("/dashboard", name="dashboard")
+def dashboard(request: Request):
+    return templates.TemplateResponse(request=request, name="dashboard.html")

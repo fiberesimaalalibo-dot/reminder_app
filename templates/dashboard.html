@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Dashboard | Student Academic Reminder System
+{% endblock %}
+
+{% block content %}
+
+<h2 class="fw-bold mb-1">
+    Dashboard
+</h2>
+
+<p class="text-muted mb-5">
+    Welcome back! Here's an overview of your academic reminders.
+</p>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 text-center h-100">
+            <div class="card-body">
+                <h6 class="text-muted">Pending</h6>
+                <h2 class="fw-bold text-primary">5</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 text-center h-100">
+            <div class="card-body">
+                <h6 class="text-muted">Due Today</h6>
+                <h2 class="fw-bold text-danger">2</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 text-center h-100">
+            <div class="card-body">
+                <h6 class="text-muted">Upcoming</h6>
+                <h2 class="fw-bold text-warning">8</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 text-center h-100">
+            <div class="card-body">
+                <h6 class="text-muted">Completed</h6>
+                <h2 class="fw-bold text-success">14</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card shadow-sm border-0 mt-5">
+
+    <div class="card-header bg-white">
+
+        <h4 class="mb-0">Recent Reminders</h4>
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Title</th>
+                        <th>Due Date</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>CSC 405 Assignment</td>
+                        <td>30 July 2026</td>
+                        <td><span class="badge bg-danger">High</span></td>
+                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>AI Presentation</td>
+                        <td>02 August 2026</td>
+                        <td><span class="badge bg-primary">Medium</span></td>
+                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Database Project</td>
+                        <td>05 August 2026</td>
+                        <td><span class="badge bg-danger">High</span></td>
+                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="text-end mt-4">
+
+    <a href="{{ request.url_for('reminders') }}" class="btn btn-primary">
+
+        + Add Reminder
+
+    </a>
+
+</div>
+
+{% endblock %}

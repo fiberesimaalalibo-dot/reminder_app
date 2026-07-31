@@ -673,6 +673,7 @@ name = "reminder-app"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "email-validator" },
     { name = "fastapi", extra = ["standard"] },
     { name = "jinja2" },
     { name = "sqlalchemy" },
@@ -680,6 +681,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "email-validator", specifier = ">=2.3.0" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.140.0" },
     { name = "jinja2", specifier = ">=3.1.6" },
     { name = "sqlalchemy", specifier = ">=2.0.51" },
